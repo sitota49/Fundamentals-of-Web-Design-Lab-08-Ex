@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const Brad = {
     firstName: "Brad",
     lastName: "Bansely",
-    fullName: function(ui_place, message) {
+    fullName: function (ui_place, message) {
 
         ui_place.innerHTML = `${message} ${this.firstName} ${this.lastName}`;
 
@@ -30,6 +30,8 @@ function usingCall() {
 
     //1. Borrow fullName using call
     //2. Pass call_demo[as ui_place] , Hi I am ,[message]
+    Brad.fullName.call(Cerscy, call_demo, 'Hi I am')
+
 
 
 }
@@ -45,7 +47,7 @@ function usingApply() {
     //1. Borrow fullName using apply
     //2. Pass apply_demo[as ui_place] and Hi I am ,[as message] as array
 
-
+    Brad.fullName.apply(Jon, [apply_demo, 'Hi I am']);
 }
 
 function usingBind() {
@@ -59,5 +61,7 @@ function usingBind() {
     //1. Borrow fullName using bind
     //2. Pass bind_demo[as ui_place] , Hi I am ,[as message]
 
+    const newFun = Brad.fullName.bind(Daenerys, bind_demo, 'Hi I am')
+    newFun();
 
 }
