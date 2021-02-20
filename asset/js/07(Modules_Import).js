@@ -1,5 +1,6 @@
 //1. Import the myVar as destructuring
-import { myVar } from './07(Modules_Export).js'
+console.log("hi");
+import { myVar } from '07(Modules_Export).js'
 //2. Display the Var [remove the string when you have the variable]
 simple_import.innerHTML = myVar;
 
@@ -25,9 +26,9 @@ import * as imp_all from './07(Modules_Export).js';
 //10. Display on the UL
 import_all.innerHTML = `
 
-<li class="list-group-item" > imp_all.myVar </li>
-<li class="list-group-item" > imp_all.exp1()</li>
-<li class="list-group-item" > imp_all.exp2_Alias()</li>
-<li class="list-group-item" > imp_all.exp3()</li>
+<li class="list-group-item" > ${imp_all.myVar} </li>
+<li class="list-group-item" >${imp_all.exp1()} </li>
+<li class="list-group-item" > ${imp_all.exp2_Alias()}</li>
+<li class="list-group-item" > ${imp_all.exp3()}</li>
 
 `;
